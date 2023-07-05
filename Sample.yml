@@ -1,5 +1,5 @@
 - name: Trial Playbook 
-  hosts: 10.0.0.16
+  hosts: 10.0.0.16, 127.0.0.1, jumpserver
   tasks:
   - name: To print
     ansible.builtin.debug:
