@@ -6,7 +6,7 @@
       msg: Hello, world !! 
 
 - name: Trial Playbook 2
-  hosts: 127.0.0.1, jumpserver
+  hosts: cart
   tasks:
   - name: To print
     ansible.builtin.debug:
