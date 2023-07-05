@@ -1,6 +1,6 @@
 - name: Trial Playbook 
-  hosts: jumpserver
-  tasks: 
+  hosts: 10.0.0.16
+  tasks:
   - name: To print
     ansible.builtin.debug:
       msg: Hello, world !! 
