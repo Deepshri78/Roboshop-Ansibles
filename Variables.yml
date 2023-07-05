@@ -5,5 +5,5 @@
   tasks:
   - name: To print values of a variable
     ansible.builtin.debug:
-    msg: Hello - {{URL}}
+      msg: Hello - {{URL}}
 
