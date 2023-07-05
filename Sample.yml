@@ -1,6 +1,6 @@
-name: Trial Playbook 
-host: jumpserver
-task: 
-  -name: To print
-  -ansible.builtin.debug:
+- name: Trial Playbook 
+  host: jumpserver
+  task: 
+  - name: To print
+    ansible.builtin.debug:
       msg: Hello, world !! 
