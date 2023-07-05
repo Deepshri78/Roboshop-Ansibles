@@ -1,0 +1,9 @@
+- name: Variable demo
+  hosts: jumpserver
+  vars:
+    URL: some value for variable
+  tasks:
+    - name:
+      ansible.buitlin.debug:
+      msg: Hello - {{URL}}
+
