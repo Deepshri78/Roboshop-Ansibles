@@ -3,7 +3,7 @@
   vars:
     URL: some value for variable
   tasks:
-   - name: To print values of a variable
-     ansible.buitlin.debug:
+  - name: To print values of a variable
+    ansible.buitlin.debug:
       msg: Hello - {{URL}}
 
