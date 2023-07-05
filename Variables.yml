@@ -1,9 +1,9 @@
 - name: Variable demo
   hosts: jumpserver
   vars:
-    URL: some value for variable
+    URL: some value for variable 
   tasks:
   - name: To print values of a variable
-    ansible.buitlin.debug:
-      msg: Hello - {{URL}}
+    ansible.builtin.debug:
+    msg: Hello - {{URL}}
 
