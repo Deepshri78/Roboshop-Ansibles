@@ -7,3 +7,11 @@
     ansible.builtin.debug:
       msg: Hello - {{URL}}
 
+- name: Variable demo - using file
+  hosts: jumpserver
+  vars_files:
+    - File_containing_variable_value.yml
+tasks:
+- name: To retreive variable value from file
+  ansible.builtin.debug:
+  msg: Hello - {{URL}}
