@@ -10,7 +10,7 @@
 - name: Variable demo - using file
   hosts: jumpserver
   vars_files:
-    - File_containing_variable_value.yml
+    - File_Containing_variable_value.yml
   tasks:
   - name: To retreive variable value from file
     ansible.builtin.debug:
