@@ -26,9 +26,12 @@
     ansible.builtin.debug:
       msg: Hello - {{URL}}
 
-- name: Variable in a hosts file
+- name: Demo on facts/pre-defined variables
   hosts: jumpserver
   tasks:
-   -  name: TO print again
-      ansible.builtin.debug:
-        msg: Hello {{URL}}
+  - name: Print message
+    ansible.builtin.debug:
+      msg: My name is - {{ansible_hostname}}
+  - name: Print message2
+    ansible.builtin.debug:      
+      msg: My IP is - {{ansible_all_ipv4_addresses}}  
