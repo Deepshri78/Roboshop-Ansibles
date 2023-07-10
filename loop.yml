@@ -8,4 +8,4 @@
         - bat
         - gloves
       ansible.builtin.debug:
-        msg: I have - {{items}}
+        msg: I have - {{item}}
