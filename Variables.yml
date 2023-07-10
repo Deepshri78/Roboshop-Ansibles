@@ -35,3 +35,19 @@
   - name: Print message2
     ansible.builtin.debug:      
       msg: My IP is - {{ansible_all_ipv4_addresses}}  
+
+- name: To show out variable
+  hosts: jumpserver
+  tasks:
+    - name: get uptime
+      ansible.builtin.shell: uptime
+      register: out
+
+    - name: get the uptime data from oout variable
+      ansible.builtin.debug:
+        msg: Uptime - "{{out.stdout}}"
+
+    - name: Setting facts using complex arguments
+      ansible.builtin.set_fact:
+        fact1: "{{out.stdout}}"
+
