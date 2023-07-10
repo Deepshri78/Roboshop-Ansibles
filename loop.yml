@@ -1,0 +1,11 @@
+- name: how to traverse through a loop
+  hosts: jumpserver
+  vars: 
+  tasks:
+    - name: Loops
+      loop:
+        - ball
+        - bat
+        - gloves
+      ansible.builtin.debug:
+        msg: I have - {{items}}
