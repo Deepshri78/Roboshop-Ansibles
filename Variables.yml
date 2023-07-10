@@ -42,12 +42,13 @@
     - name: get uptime
       ansible.builtin.shell: uptime
       register: out
-
-    - name: get the uptime data from oout variable
+    - name: get the uptime data from out variable
       ansible.builtin.debug:
         msg: Uptime - "{{out.stdout}}"
-
     - name: Setting facts using complex arguments
       ansible.builtin.set_fact:
         fact1: "{{out.stdout}}"
+    - name: Print values
+      ansible.builtin.debug:
+        msg: My fact is - {{fact1}}
 
