@@ -14,4 +14,4 @@
   tasks:
   - name: To retreive variable value from file
     ansible.builtin.debug:
-      msg: Hello - {{URL}}
+    msg: Hello - {{URL}}
