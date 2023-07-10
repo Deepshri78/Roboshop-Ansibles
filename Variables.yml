@@ -25,3 +25,10 @@
       URL: abc
     ansible.builtin.debug:
       msg: Hello - {{URL}}
+
+- name: Variable in a hosts file
+  hosts: jumpserver
+  tasks:
+   -  name: TO print again
+      ansible.builtin.debug:
+        msg: Hello : {{URL}}
