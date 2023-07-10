@@ -1,0 +1,4 @@
+- name: Demonstrating roles in ansibles
+  hosts: jumpserver
+  roles:
+   - demo

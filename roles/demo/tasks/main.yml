@@ -1,0 +1,6 @@
+- name: Doing tasks using roles 
+  hosts: jumpserver
+  tasks:
+    - name:
+      ansible.builtin.debug:
+        msg: Hello {{URL}}
