@@ -9,3 +9,11 @@
         - gloves
       ansible.builtin.debug:
         msg: I have - {{item}}
+  tasks:
+    - name: Loops
+      loop:
+        - { name: ball, quantity: 6 }
+        - { name: bat, quantity: 1 }
+        - { name: gloves, quantity: 2 }
+      ansible.builtin.debug:
+        msg: I have - {{item.quantity}} {{item.name}} (s)
