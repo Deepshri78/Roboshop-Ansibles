@@ -31,4 +31,4 @@
   tasks:
    -  name: TO print again
       ansible.builtin.debug:
-        msg: Hello : {{URL}}
+        msg: Hello {{URL}}
