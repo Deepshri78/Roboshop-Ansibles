@@ -1,0 +1,20 @@
+- name: Tasks on conditions
+  hosts: jumpserver
+  vars: 
+    a : 10
+    var1 : true
+  tasks:
+    - name: Print message
+      vars:
+      ansible.builtin.debug:
+        msg: Hello world !!
+      when: ansible_facts['distribution'] == "centOS" 
+   - name: Number check condition
+      ansible.builtin.debug:
+        msg: {{a}} is greater than 1
+      when: a > 1 
+   - name: Print message
+      ansible.builtin.debug:
+        msg: Hello world 2 !!
+      when: var1 | bool
+
